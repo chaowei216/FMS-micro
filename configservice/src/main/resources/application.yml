@@ -1,0 +1,32 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud: # config by git backend
+    config:
+      server:
+        git:
+          uri: file://D:/Dev/JavaSpring/micro/configservice/src/main/resources/shared
+#  cloud: # config by github provider
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/chaowei216/spring-cloud
+#          default-label: main
+#          username: luutrieuvi2003@gmail.com
+#          password: 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
+  security:
+    user:
+      name: root
+      password: 123456
+#  profiles: CONFIG BY FILE
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared
+
+

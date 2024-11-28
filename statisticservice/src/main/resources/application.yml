@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: statistic-service
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true # service will not run if it can't reach the config service
+      username: root
+      password: 123456

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: auth-service
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true
+      username: root
+      password: 123456
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:/db/oauth2-registered-client-schema.sql
+

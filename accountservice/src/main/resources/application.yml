@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: account-service
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true
+      username: root
+      password: 123456
+  # the service will not run if it can't reach the config-service
